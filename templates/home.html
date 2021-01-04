@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<br>
+<h3>
+    Welcome to home page 
+</h3>
+<br>
+
+<h4> list of books</h4>
+<ul>
+    {% for i in object_list %}
+    <li><a href="{% url 'details' i.pk %}">{{i.title}}</a></li>
+    {% endfor%}
+</ul>
+{% endblock main%}
